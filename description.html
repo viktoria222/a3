@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>i231.stack.v4</title>
+</head>
+<body>
+Implement an abstract data type "Stack of long integers" (LIFO) using linkedlists.
+String representation of a stack (provided by <code>toString</code> method) 
+must be ordered from bottom to top (tos is the last element). 
+<br>
+List of compulsory operations:
+<br>
+Constructor for a new stack:  <code>LongStack()</code>
+<br>
+Copy of the stack: <code>Object clone()</code>
+<br>
+Check whether the stack is empty: <code>boolean stEmpty()</code>
+<br>
+Adding an element to the stack: <code>void push (long a)</code>
+<br>
+Removing an element from the stack: <code>long pop()</code>
+<br>
+Arithmetic operation <code>s</code> ( <code>+ - * /</code> ) between two
+topmost elements of the stack (result is left on top): 
+<code>void op (String s)</code>
+<br>
+Reading the top without removing it: <code>long tos()</code>
+<br>
+Check whether two stacks are equal: <code>boolean equals (Object o)</code>
+<br>
+Conversion of the stack to string (top last): <code>String toString()</code>
+<br><br>
+Write a method 
+<br><code>
+public static long interpret (String pol) </code><br> 
+to calculate the value of an arithmetic expression <code>pol</code> in RPN
+(Reverse Polish Notation) using this stack type. 
+Expression is a string which contains long integers (including negative and
+multi-digit numbers) and arithmetic operations <code> + - * / </code>
+separated by whitespace symbols. The result must be a long integer value of 
+the expression or throwing a RuntimeException in case the expression 
+is not correct. Expression is not correct if it contains illegal symbols, 
+leaves redundant elements on top of stack or causes stack underflow.
+<br>
+Example.  <code>LongStack.interpret ("2 15 -")</code>  should return
+<code> -13</code> .
+<br><br>
+Realiseerida abstraktne andmetüüp "pikkade  täisarvude magasin" (LIFO) ahela 
+(linkedlist) abil. Magasini sõnena esitamisel olgu tipp lõpus  
+(meetod <code>toString()</code> väljastab elemendid põhja poolt tipu poole).
+<br>
+Operatsioonide loetelu:
+<br>
+uue magasini konstruktor:  <code>LongStack()</code>
+<br>
+koopia loomine: <code>Object clone()</code>
+<br>
+kontroll, kas magasin on tühi: <code>boolean stEmpty()</code>
+<br>
+magasini elemendi lisamine: <code>void push (long a)</code>
+<br>
+magasinist elemendi võtmine: <code>long pop()</code>
+<br>
+aritmeetikatehe s ( <code>+ - * /</code> ) magasini kahe pealmise elemendi 
+vahel (tulemus pannakse uueks tipuks): <code>void op (String s)</code>
+<br>
+tipu lugemine eemaldamiseta: <code>long tos()</code>
+<br>
+kahe magasini võrdsuse kindlakstegemine: <code>boolean equals (Object o)</code>
+<br>
+teisendus sõneks (tipp lõpus): <code>String toString()</code>
+<br><br>
+Koostada meetod signatuuriga
+<br><code>
+public static long interpret (String pol) </code><br> 
+aritmeetilise avaldise pööratud poola kuju (sulgudeta postfikskuju, 
+Reverse Polish Notation) <code>pol</code>  interpreteerimiseks 
+(väljaarvutamiseks) 
+eelpool defineeritud pikkade täisarvude magasini abil. Avaldis on antud stringina, 
+mis võib sisaldada pikki täisarve (s.h. negatiivseid ja mitmekohalisi) ning 
+tehtemärke <code> + - * / </code>, mis on eraldatud tühikutega (whitespace). 
+Tulemuseks peab olema avaldise väärtus pika täisarvuna või erindi (RuntimeException)
+tekitamine, kui avaldis ei ole korrektne. Korrektne ei ole, kui avaldises 
+esineb lubamatuid sümboleid, kui avaldis jätab magasini üleliigseid elemente 
+või kasutab magasinist liiga palju elemente.
+<br>
+Näit.  <code>LongStack.interpret ("2 15 -")</code> peaks tagastama väärtuse 
+<code> -13</code> .
+</body>
+</html>
