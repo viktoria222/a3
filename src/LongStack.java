@@ -13,7 +13,7 @@ public class LongStack {
       System.out.println(stack1.stack.isEmpty());
       System.out.println(stack1.pop());
       System.out.println(stack1.stack.isEmpty());
-      stack1.op("+");
+      //stack1.op("+");
       System.out.println(stack1.tos());
 
       LongStack m1 = new LongStack();
@@ -27,6 +27,8 @@ public class LongStack {
 
       }
       System.out.println(m2.pop());
+      String pol = "2 13 -";
+      interpret(pol);
       // TODO!!! Your tests here!
    }
 
@@ -79,7 +81,7 @@ public class LongStack {
    }
 
    public long tos() {
-      return stack.get(stack.size() - 1); // TODO!!! Your code here!
+      return stack.get(stack.size() - 1);
    }
 
    @Override
@@ -93,7 +95,25 @@ public class LongStack {
       return stack.toString();
    }
 
-   public static long interpret(String pol) {
+   public static long interpret (String pol) {
+      //https://stackoverflow.com/questions/1102891/how-to-check-if-a-string-is-numeric-in-java
+      if (pol == null || pol.isEmpty()) {
+         throw new RuntimeException();
+      }
+      String[] splitted = pol.split("\\s+");
+      LongStack calc_stack = new LongStack();
+      for (int i = 0; i < splitted.length; i++)
+      {
+         if ( splitted[i].chars().allMatch( Character::isDigit ))
+
+         {
+            calc_stack.push(Long.parseLong(splitted[i]));
+         }else{
+
+         }
+      }
+      System.out.println(calc_stack.pop());
+
       return 0; // TODO!!! Your code here!
    }
 
